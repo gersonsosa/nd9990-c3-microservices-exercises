@@ -42,10 +42,6 @@ spec:
             value: udagram
           - name: AWS_REGION
             value: us-east-2
-          - name: AWS_PROFILE
-            value: personal
-          - name: AWS_BUCKET
-            value: udagram-microservices-531377840843-dev
           - name: URL
             value: http://users-api-svc:8080
           # secrets
