@@ -136,6 +136,29 @@
   "resolved" "https://registry.npmjs.org/@types/node/-/node-11.12.2.tgz"
   "version" "11.12.2"
 
+"@types/pino-http@^5.4.0":
+  "integrity" "sha512-d2OqdD3BWZA7JupHHkWHl/9aqzpGOI2jwD9FGcoWqbg/1f/HaXENI8T4gqzCHZg3ELkhrTaPjrLWbAfD8bGJ3g=="
+  "resolved" "https://registry.npmjs.org/@types/pino-http/-/pino-http-5.4.0.tgz"
+  "version" "5.4.0"
+  dependencies:
+    "@types/pino" "*"
+
+"@types/pino-std-serializers@*":
+  "integrity" "sha512-17XcksO47M24IVTVKPeAByWUd3Oez7EbIjXpSbzMPhXVzgjGtrOa49gKBwxH9hb8dKv58OelsWQ+A1G1l9S3wQ=="
+  "resolved" "https://registry.npmjs.org/@types/pino-std-serializers/-/pino-std-serializers-2.4.1.tgz"
+  "version" "2.4.1"
+  dependencies:
+    "@types/node" "*"
+
+"@types/pino@*", "@types/pino@^6.3.6":
+  "integrity" "sha512-yVgSyMGzNDYe/XNMJyuIkklDeZbFdGAxRztYLoN1QQrrgiLJ1oJPmnS8Ge5xpzI9ODKEddKH97VFQ7cWO6Pumw=="
+  "resolved" "https://registry.npmjs.org/@types/pino/-/pino-6.3.6.tgz"
+  "version" "6.3.6"
+  dependencies:
+    "@types/node" "*"
+    "@types/pino-std-serializers" "*"
+    "@types/sonic-boom" "*"
+
 "@types/range-parser@*":
   "integrity" "sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA=="
   "resolved" "https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.3.tgz"
@@ -158,6 +181,13 @@
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+"@types/sonic-boom@*":
+  "integrity" "sha512-AfqR0fZMoUXUNwusgXKxcE9DPlHNDHQp6nKYUd4PSRpLobF5CCevSpyTEBcVZreqaWKCnGBr9KI1fHMTttoB7A=="
+  "resolved" "https://registry.npmjs.org/@types/sonic-boom/-/sonic-boom-0.7.0.tgz"
+  "version" "0.7.0"
+  dependencies:
+    "@types/node" "*"
 
 "@types/strip-bom@^3.0.0":
   "integrity" "sha1-FKjsOVbC6B7bdSB5CuzyHCkK69I="

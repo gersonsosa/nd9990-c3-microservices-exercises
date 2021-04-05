@@ -3,17 +3,17 @@ dotenv.config();
 
 import cors from 'cors';
 import express from 'express';
-import {sequelize} from './sequelize';
+import { sequelize } from './sequelize';
 import pino from 'pino';
 import pinoExpress from 'pino-http';
 
-import {IndexRouter} from './controllers/v0/index.router';
+import { IndexRouter } from './controllers/v0/index.router';
 
 import bodyParser from 'body-parser';
-import {config} from './config/config';
-import {V0_USER_MODELS} from './controllers/v0/model.index';
+import { config } from './config/config';
+import { V0_USER_MODELS } from './controllers/v0/model.index';
 
-(async () => {
+(async (): Promise<void> => {
   await sequelize.addModels(V0_USER_MODELS);
   await sequelize.sync();
 
@@ -41,14 +41,14 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
   app.use('/api/v0/', IndexRouter);
 
   // Root URI call
-  app.get( '/', async ( req, res ) => {
-    res.send( '/api/v0/' );
-  } );
+  app.get('/', async (req, res) => {
+    res.send('/api/v0/');
+  });
 
 
   // Start the Server
-  app.listen( port, () => {
+  app.listen(port, () => {
     logger.info(`server running ${config.url}`);
     logger.info(`press CTRL+C to stop server`);
-  } );
+  });
 })();
