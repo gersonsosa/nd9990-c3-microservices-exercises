@@ -25,7 +25,7 @@ metadata:
   labels:
     app: feed-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: feed-api
@@ -37,6 +37,11 @@ spec:
       containers:
       - name: feed-api
         image: hghar/udagram-feed-api
+        resources:
+          limits:
+            cpu: "2"
+          requests:
+            cpu: "0.5"
         env:
           - name: POSTGRES_DB
             value: udagram
@@ -77,4 +82,4 @@ spec:
             path: /
             port: 8080
           initialDelaySeconds: 3
-          periodSeconds: 3
+          periodSeconds: 5
